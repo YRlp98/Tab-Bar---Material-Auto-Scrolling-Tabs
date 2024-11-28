@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tabs-container {
+    width: 375px;
+    height: 367px;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: background-color 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tabs-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #333;
+}
+
+/* Hide scrollbar on Chrome, Safari, and Edge */
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar on Firefox */
+.tabs {
+    scrollbar-width: none;
+    /* Firefox */
+}
